@@ -1,3 +1,4 @@
 # Task list
 
-- [ ] Lemp & Lamp script
+- [ ] System admin menu.
+- [ ] Lemp & Lamp script.
