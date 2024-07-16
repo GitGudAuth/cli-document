@@ -3,7 +3,7 @@ sslgen() {
     echo -n "Enter domain name: "
     read domain
     cd /home/*/SSL
-    openssl req -newkey rsa:2048 -nodes -keyout "$domain"_private.key -out $domain.csr
+    openssl req -nodes -newkey rsa:2048 -sha256 -keyout "$domain".key -out $domain.csr
     cd ~
     ls -l /home/*/SSL
     echo "Generating csr and private key complete !"
