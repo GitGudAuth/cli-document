@@ -15,7 +15,7 @@ switchroot()
     then
         echo "Switching to root..."
         sleep 2
-        sudo "$0" "$@"
+        sudo su
     else
         echo "You are root!"
         sleep 2
