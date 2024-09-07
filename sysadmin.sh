@@ -2,25 +2,37 @@
 sslgen() {
     echo -n "Enter domain name: "
     read domain
-    cd /home/*/SSL
-    openssl req -new  -newkey rsa:2048 -nodes -keyout ${domain}.key -out ${domain}.csr -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname"
+
+    # Subject
+    commonname=$domain
+    country=VN
+    state=HCM
+    locality=HCM
+    organization=$domain
+    organizationalunit=IT
+
+    if [ ! -d "$HOME/SSL" ]; then
+        mkdir -p "$HOME/SSL"
+    fi
+    
+    cd $HOME/SSL
+    openssl req -new  -newkey rsa:2048 -nodes -keyout "$domain".key -out "$domain".csr -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname"
     echo "---------------------------"
     echo "-----Below is your CSR-----"
     echo "---------------------------"
     echo
-    cat $domain.csr
+    cat "$domain".csr
     
     echo
     echo "---------------------------"
     echo "-----Below is your Key-----"
     echo "---------------------------"
     echo
-    cat $domain.key
+    cat "$domain".key
     
     cd ~
-    ls -l /home/*/SSL
+    ls -l $HOME/SSL
     echo "Generating csr and private key complete !"
-    sleep 2
 }
 switchroot()
 {    
