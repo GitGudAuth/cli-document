@@ -6,4 +6,5 @@
 - [x] Check spec
 - [x] Paste to html console
 - [x] SSL checker
+- [x] Faster ssh command ?
 - [ ] Lemp & Lamp script.
