@@ -8,4 +8,5 @@
 - [x] SSL checker
 - [x] Paste to html console (like proxmox and vSphere/Esxi)
 - [x] Faster ssh command ?
+- [x] Basic compress /home and export database
 - [ ] Lemp & Lamp script.
