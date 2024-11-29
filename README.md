@@ -6,5 +6,6 @@
 - [x] Check spec
 - [x] Paste to html console
 - [x] SSL checker
+- [x] Paste to html console (like proxmox and vSphere/Esxi)
 - [x] Faster ssh command ?
 - [ ] Lemp & Lamp script.
